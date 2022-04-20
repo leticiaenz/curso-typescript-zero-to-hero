@@ -19,8 +19,9 @@ console.log(tarefaPendente);
 
 let concluido: boolean = false;
 
-if (!concluido) {
-    console.log('Tarefa foi concluída com sucesso!')
-} else {
-    console.log('Tarefa Pendente!');
+if (concluido) {
+  console.log('Tarefa concluída com sucesso');
+
+}else{
+  console.log("Tarefa Pendente");
 }
