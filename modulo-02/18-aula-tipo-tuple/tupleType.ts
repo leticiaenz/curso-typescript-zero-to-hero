@@ -10,8 +10,7 @@
 // ==> Exemplo 01 - Uso simples de Tuplas em TypeScript
 
 let pessoa: [string, string, number];
-pessoa = ['Glaucia Lemos', 'Cloud Advocate JavaScript', 34];
-// pessoa = [34, 'Cloud Advocate JavaScript', 'Glaucia Lemos'];
+pessoa = ['Glaucia Lemos', 'Cloud Java Script', 34]
 
 console.log(pessoa);
 
@@ -35,26 +34,25 @@ console.log(...listaFrutas);
 
 //==> Exemplo 05 - Lista Heterogênea de Tupla:
 
-let listaFrutas2: [number, boolean, ...string[]] = [5, true, ...listaFrutas];
+let  listaFrutas2: [number, boolean, ...string[]] = [5, true, ...listaFrutas];
 console.log(listaFrutas2);
 
-// ==> Exemplo 06 - Uso de função com Tuplas
 
-function listarPessoas(nomes: string[], idades: number[]) {
-    return [...nomes, ...idades];
+// ==> Exemplo 06 - Uso de função com Tuplas
+function listarPessoa(nome: string[], idade: number[]){
+  return[...nome, ...idade]
 }
 
-let resultado = listarPessoas(['Glaucia', 'Jurema'], [34, 68]);
-console.log(resultado)
+let resultado = listarPessoa(['Leticia', 'Miguel'], [32, 5]);
+console.log(resultado);
 
 // ==> Exemplo 07 - Labeled Tuples com Spread Operator numa função
-
-type Nome = 
-        | [primeiroNome: string, sobrenome: string]
+type Nome =
+        | [primeiroNome: string, sobreome: string]
         | [primeiroNome: string, nomeMeio: string, sobrenome: string]
 
 function criarPessoa(...nome: Nome) {
-    return [...nome];
+  return [...nome];
 }
 
 console.log(criarPessoa('Glaucia', 'Lemos'));

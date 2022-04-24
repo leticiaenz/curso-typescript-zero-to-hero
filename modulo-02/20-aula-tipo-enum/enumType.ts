@@ -34,21 +34,22 @@ console.log(Dia);
 
 // ==> Exemplo 03: Como podemos acessar um valor de um Enum com uma chave: (usando o const)
 
-/*const enum Comida {
-  Hamburger,
-  Massa,
-  Pizza,
-  Torta,
-  Churrasco,
-}
+//  const enum Comida {
+//    Hamburger,
+//    Massa,
+//    Pizza,
+//    Torta,
+//    Churrasco,
+//  }
 
-function comida(c: Comida) {
-  return 'Comidas muito apetitosas!';
-}
+ function comida(c: Comida) {
+   return 'Comida muito apetitosa';
+ }
 
-console.log(comida(Comida.Pizza));
-console.log(comida(Comida.Churrasco));
-console.log(comida(5));*/
+ console.log(comida(Comida.Pizza));
+ console.log(comida(Comida.Churrasco));
+ console.log(comida(5));
+
 
 const enum Comida {
   Hamburger = 'Hamburger',
@@ -64,9 +65,9 @@ function comida(c: Comida) {
 
 console.log(comida(Comida.Pizza));
 console.log(comida(Comida.Churrasco));
-// console.log(comida(5));
+//console.log(comida(5));
 
-// ==> Exemplo 04: Quando usar enum?!
+// // ==> Exemplo 04: Quando usar enum?!
 enum Tarefa {
   Todo,
   Progress,
@@ -76,9 +77,8 @@ enum Tarefa {
 const concluidaTarefa = {
   id: 1,
   status: Tarefa.Done,
-  descricao: 'Parabéns! Tarefa concluída com sucesso!',
-};
-
+  descricao: 'Parabens Tarefa concluida com sucesso',
+}
 if (concluidaTarefa.status === Tarefa.Done) {
   console.log('Enviar e-mail: Tarefa Concluída!');
 }
